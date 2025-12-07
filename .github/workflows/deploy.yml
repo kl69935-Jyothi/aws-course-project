@@ -26,3 +26,11 @@ jobs:
       - name: Upload artifact to S3
         run: |
           aws s3 cp lambda.zip s3://scalable-arch-codedeploy-jyothi/lambda.zip
+
+      - name: Deploy new code to Lambda
+        run: |
+          aws lambda update-function-code \
+            --function-name YOUR_LAMBDA_FUNCTION_NAME_HERE \
+            --s3-bucket scalable-arch-codedeploy-jyothi \
+            --s3-key lambda.zip \
+            --publish
