@@ -3,6 +3,11 @@
 This project deploys a scalable AWS architecture using Terraform, CloudFormation, and Python Boto3.
 
 ---
+## Architecture Diagram
+
+![Architecture Diagram](project.drawio (1).png)
+
+---
 
 ## Architecture Components
 
