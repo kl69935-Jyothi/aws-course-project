@@ -1,0 +1,12 @@
+version: 0.0
+os: linux
+
+files:
+  - source: app/
+    destination: /var/www/html/
+
+hooks:
+  BeforeInstall:
+    - location: scripts/clean_old_files.sh
+      timeout: 300
+      runas: root
